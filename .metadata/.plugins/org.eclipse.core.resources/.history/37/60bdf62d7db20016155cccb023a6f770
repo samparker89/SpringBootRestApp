@@ -1,0 +1,38 @@
+package com.samparker;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.samparker.DAO.CustomerRepository;
+import com.samparker.DOM.Customer;
+
+@RestController
+public class CustomerDetailsController {
+
+	@Autowired
+	private CustomerRepository customerDAO;
+	
+	@RequestMapping(path="/addCustomer", method=RequestMethod.PUT)
+	public void addCustomer(@RequestBody Customer customer){
+		
+		System.out.println("Customer request is: " + customer.toString());
+		customerDAO.save(customer);
+		
+	}
+	
+	@RequestMapping(path="/addCustomers", method=RequestMethod.PUT)
+	public void addCustomers(@RequestBody List<Customer> customers){
+		
+		for(Customer customer : customers){
+			System.out.println(customer);
+		}
+		
+		customerDAO.save(customers);
+		
+	}
+	
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CustomerDetailsControllerTest" project="SamsSpringBootApp" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.samparker.test.CustomerDetailsControllerTest" time="0.505">
+    <testcase name="addCustomerTest" classname="com.samparker.test.CustomerDetailsControllerTest" time="0.452"/>
+    <testcase name="addCustomersTest" classname="com.samparker.test.CustomerDetailsControllerTest" time="0.053"/>
+  </testsuite>
+</testrun>

@@ -1,0 +1,63 @@
+package com.samparker.test;
+
+import static org.junit.Assert.assertThat;
+
+import static org.hamcrest.Matchers.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import org.junit.After;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;   
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+
+import com.samparker.DAO.CustomerDAO;
+import com.samparker.DOM.Customer;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
+@AutoConfigureMockMvc
+public class CustomerDetailsControllerTest {
+
+	@Autowired
+	private MockMvc mvc;
+	
+	@Autowired
+	private CustomerDAO customerDAO;
+	
+	private static final String FIRST_NAME = "Sam";
+	private static final String LAST_NAME = "Parker";
+	
+	private static final String JSON_STRING = "{"
+			+ "\"firstName\":\"" + FIRST_NAME + "\","
+			+ "\"lastName\":\"" + LAST_NAME + "\""
+			+ "}";
+	
+	@After
+	private void tearDown(){
+		customerDAO.deleteAllByFirstAndLastName(FIRST_NAME, LAST_NAME);
+	}
+	
+	@Test
+	public void getCustomerReturnsCorrectCustomerTest() throws Exception {
+		
+		System.out.println(JSON_STRING);
+		
+		mvc.perform(MockMvcRequestBuilders.put("/addCustomer").contentType(MediaType.APPLICATION_JSON_UTF8).accept(MediaType.APPLICATION_JSON).content(JSON_STRING))
+		.andExpect(status().isOk())
+		.andExpect(content().string(equalTo(JSON_STRING)));
+		
+		Customer expectedCustomer = new Customer(FIRST_NAME, LAST_NAME);
+		Customer actualCustomer = customerDAO.findByFirstNameAndLastName(FIRST_NAME, LAST_NAME);
+		
+		assertThat(actualCustomer.getFirstName(), equalTo(expectedCustomer.getFirstName()));
+		assertThat(actualCustomer.getLastName(), equalTo(expectedCustomer.getLastName()));
+	}
+
+}

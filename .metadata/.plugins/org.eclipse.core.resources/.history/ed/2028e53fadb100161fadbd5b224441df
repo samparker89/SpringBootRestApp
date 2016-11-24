@@ -1,0 +1,5 @@
+package com.samparker.DAO;
+
+public interface CustomerDAO {
+
+}

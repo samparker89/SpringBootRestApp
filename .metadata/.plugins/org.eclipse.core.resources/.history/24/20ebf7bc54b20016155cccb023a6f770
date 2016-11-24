@@ -1,0 +1,9 @@
+CREATE DATABASE Customers;
+
+USE Customers;
+
+CREATE TABLE Customers (customerId int, firstName varchar(255), lastName varchar(255));
+
+CREATE USER customer_user;
+
+GRANT ALL ON Customers.Customers TO 'customer_user@localhost' IDENTIFIED BY 'password';

@@ -1,0 +1,5 @@
+CREATE DATABASE Customers;
+
+USE Customers;
+
+CREATE TABLE Customers (customerId int, firstName varchar(255), lastName varchar(255));

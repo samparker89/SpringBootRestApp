@@ -1,0 +1,200 @@
+!SESSION 2016-11-23 16:41:53.052 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/samparker/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/samparker/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2016-11-23 16:42:21.141
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui.ide 4 4 2016-11-23 17:09:57.564
+!MESSAGE Problems occurred refreshing the selected resources.
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2016-11-23 17:09:57.564
+!MESSAGE The project description file (.project) for '1' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+
+!ENTRY org.eclipse.core.resources 2 2 2016-11-23 17:10:01.580
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2016-11-23 17:10:01.580
+!MESSAGE The project description file (.project) for '1' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SESSION 2016-11-24 14:25:57.583 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/samparker/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -data file:/Users/samparker/Documents/JavaProjects/workspace/ -product org.eclipse.epp.package.java.product -keyring /Users/samparker/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2016-11-24 14:26:15.555
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2016-11-24 15:02:53.068
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2016-11-24 15:02:53.068
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2016-11-24 15:02:53.069
+!MESSAGE "Eclipse Git Team Provider" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2016-11-24 15:02:53.069
+!MESSAGE "Eclipse Git Team Provider - Task focused interface" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2016-11-24 15:02:53.069
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.069
+!MESSAGE Software being installed: Eclipse Git Team Provider 4.5.0.201609210915-r (org.eclipse.egit.feature.group 4.5.0.201609210915-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.069
+!MESSAGE Software currently installed: Java implementation of Git 4.4.1.201607150455-r (org.eclipse.jgit.feature.group 4.4.1.201607150455-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-11-24 15:02:53.069
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.069
+!MESSAGE Java implementation of Git 4.4.0.201606070830-r (org.eclipse.jgit.feature.jar 4.4.0.201606070830-r)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.069
+!MESSAGE Java implementation of Git 4.4.1.201607150455-r (org.eclipse.jgit.feature.jar 4.4.1.201607150455-r)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.069
+!MESSAGE Java implementation of Git 4.5.0.201609210915-r (org.eclipse.jgit.feature.jar 4.5.0.201609210915-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-11-24 15:02:53.069
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.069
+!MESSAGE From: Eclipse Git Team Provider 4.5.0.201609210915-r (org.eclipse.egit.feature.group 4.5.0.201609210915-r)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.069
+!MESSAGE To: org.eclipse.jgit.feature.group [4.5.0,4.6.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-11-24 15:02:53.069
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.069
+!MESSAGE From: Java implementation of Git 4.4.1.201607150455-r (org.eclipse.jgit.feature.group 4.4.1.201607150455-r)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.069
+!MESSAGE To: org.eclipse.jgit.feature.jar [4.4.1.201607150455-r]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-11-24 15:02:53.069
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.069
+!MESSAGE From: Java implementation of Git 4.5.0.201609210915-r (org.eclipse.jgit.feature.group 4.5.0.201609210915-r)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.069
+!MESSAGE To: org.eclipse.jgit.feature.jar [4.5.0.201609210915-r]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2016-11-24 15:02:53.134
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2016-11-24 15:02:53.134
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2016-11-24 15:02:53.134
+!MESSAGE "Eclipse Git Team Provider" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2016-11-24 15:02:53.134
+!MESSAGE "Eclipse Git Team Provider - Task focused interface" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2016-11-24 15:02:53.134
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.134
+!MESSAGE Software being installed: Eclipse Git Team Provider 4.5.0.201609210915-r (org.eclipse.egit.feature.group 4.5.0.201609210915-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.134
+!MESSAGE Software currently installed: Java implementation of Git 4.4.1.201607150455-r (org.eclipse.jgit.feature.group 4.4.1.201607150455-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-11-24 15:02:53.134
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.134
+!MESSAGE Java implementation of Git 4.4.0.201606070830-r (org.eclipse.jgit.feature.jar 4.4.0.201606070830-r)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.134
+!MESSAGE Java implementation of Git 4.4.1.201607150455-r (org.eclipse.jgit.feature.jar 4.4.1.201607150455-r)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.134
+!MESSAGE Java implementation of Git 4.5.0.201609210915-r (org.eclipse.jgit.feature.jar 4.5.0.201609210915-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-11-24 15:02:53.134
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.134
+!MESSAGE From: Eclipse Git Team Provider 4.5.0.201609210915-r (org.eclipse.egit.feature.group 4.5.0.201609210915-r)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.134
+!MESSAGE To: org.eclipse.jgit.feature.group [4.5.0,4.6.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-11-24 15:02:53.134
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.134
+!MESSAGE From: Java implementation of Git 4.4.1.201607150455-r (org.eclipse.jgit.feature.group 4.4.1.201607150455-r)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.134
+!MESSAGE To: org.eclipse.jgit.feature.jar [4.4.1.201607150455-r]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-11-24 15:02:53.134
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.134
+!MESSAGE From: Java implementation of Git 4.5.0.201609210915-r (org.eclipse.jgit.feature.group 4.5.0.201609210915-r)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.134
+!MESSAGE To: org.eclipse.jgit.feature.jar [4.5.0.201609210915-r]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2016-11-24 15:02:53.144
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2016-11-24 15:02:53.145
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2016-11-24 15:02:53.145
+!MESSAGE "Eclipse Git Team Provider" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2016-11-24 15:02:53.145
+!MESSAGE "Eclipse Git Team Provider - Task focused interface" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2016-11-24 15:02:53.145
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.145
+!MESSAGE Software being installed: Eclipse Git Team Provider 4.5.0.201609210915-r (org.eclipse.egit.feature.group 4.5.0.201609210915-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.145
+!MESSAGE Software currently installed: Java implementation of Git 4.4.1.201607150455-r (org.eclipse.jgit.feature.group 4.4.1.201607150455-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-11-24 15:02:53.145
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.145
+!MESSAGE Java implementation of Git 4.4.0.201606070830-r (org.eclipse.jgit.feature.jar 4.4.0.201606070830-r)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.145
+!MESSAGE Java implementation of Git 4.4.1.201607150455-r (org.eclipse.jgit.feature.jar 4.4.1.201607150455-r)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.145
+!MESSAGE Java implementation of Git 4.5.0.201609210915-r (org.eclipse.jgit.feature.jar 4.5.0.201609210915-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-11-24 15:02:53.145
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.145
+!MESSAGE From: Eclipse Git Team Provider 4.5.0.201609210915-r (org.eclipse.egit.feature.group 4.5.0.201609210915-r)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.145
+!MESSAGE To: org.eclipse.jgit.feature.group [4.5.0,4.6.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-11-24 15:02:53.145
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.145
+!MESSAGE From: Java implementation of Git 4.4.1.201607150455-r (org.eclipse.jgit.feature.group 4.4.1.201607150455-r)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.145
+!MESSAGE To: org.eclipse.jgit.feature.jar [4.4.1.201607150455-r]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-11-24 15:02:53.145
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.145
+!MESSAGE From: Java implementation of Git 4.5.0.201609210915-r (org.eclipse.jgit.feature.group 4.5.0.201609210915-r)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.145
+!MESSAGE To: org.eclipse.jgit.feature.jar [4.5.0.201609210915-r]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2016-11-24 15:02:53.145
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2016-11-24 15:02:53.145
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2016-11-24 15:02:53.145
+!MESSAGE "Eclipse Git Team Provider" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2016-11-24 15:02:53.145
+!MESSAGE "Eclipse Git Team Provider - Task focused interface" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2016-11-24 15:02:53.145
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.145
+!MESSAGE Software being installed: Eclipse Git Team Provider 4.5.0.201609210915-r (org.eclipse.egit.feature.group 4.5.0.201609210915-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.145
+!MESSAGE Software currently installed: Java implementation of Git 4.4.1.201607150455-r (org.eclipse.jgit.feature.group 4.4.1.201607150455-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-11-24 15:02:53.145
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.145
+!MESSAGE Java implementation of Git 4.4.0.201606070830-r (org.eclipse.jgit.feature.jar 4.4.0.201606070830-r)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.145
+!MESSAGE Java implementation of Git 4.4.1.201607150455-r (org.eclipse.jgit.feature.jar 4.4.1.201607150455-r)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.146
+!MESSAGE Java implementation of Git 4.5.0.201609210915-r (org.eclipse.jgit.feature.jar 4.5.0.201609210915-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-11-24 15:02:53.146
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.146
+!MESSAGE From: Eclipse Git Team Provider 4.5.0.201609210915-r (org.eclipse.egit.feature.group 4.5.0.201609210915-r)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.146
+!MESSAGE To: org.eclipse.jgit.feature.group [4.5.0,4.6.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-11-24 15:02:53.146
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.146
+!MESSAGE From: Java implementation of Git 4.4.1.201607150455-r (org.eclipse.jgit.feature.group 4.4.1.201607150455-r)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.146
+!MESSAGE To: org.eclipse.jgit.feature.jar [4.4.1.201607150455-r]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-11-24 15:02:53.146
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.146
+!MESSAGE From: Java implementation of Git 4.5.0.201609210915-r (org.eclipse.jgit.feature.group 4.5.0.201609210915-r)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-11-24 15:02:53.146
+!MESSAGE To: org.eclipse.jgit.feature.jar [4.5.0.201609210915-r]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-11-24 16:33:35.600
+!MESSAGE The POM for mysql:mysql-connector-java:jar:5.7.16 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-11-24 16:35:08.757
+!MESSAGE The POM for mysql:mysql-connector-java:jar:5.7.16 is missing, no dependency information available

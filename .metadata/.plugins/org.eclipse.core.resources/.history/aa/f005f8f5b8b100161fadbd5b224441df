@@ -1,0 +1,31 @@
+package com.samparker.DOM;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@Entity
+public class Customer {
+
+	@Id
+	@GeneratedValue
+	@JsonIgnore
+	private Long id;
+	private String firstName;
+	private String lastName;
+	
+	protected Customer(){};
+	
+	public Customer(String firstName, String lastName){
+		this.firstName = firstName;
+		this.lastName = lastName;
+	};
+	
+	@Override
+	public String toString(){
+		return String.format("Id: %s, FirstName: %s, LastName %s", this.id, this.firstName, this.lastName);
+	}
+	
+}

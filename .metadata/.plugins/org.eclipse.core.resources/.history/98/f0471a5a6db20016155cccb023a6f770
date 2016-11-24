@@ -1,0 +1,18 @@
+package com.samparker.DAO;
+
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.samparker.DOM.Customer;
+
+public interface CustomerRepository extends CrudRepository<Customer, Long> {
+
+	Customer findByFirstNameAndLastName(String firstName, String lastName);
+	
+	@Transactional
+	List<Customer> deleteByFirstNameAndLastName(String firstName, String lastName);
+	
+}

@@ -1,0 +1,20 @@
+package com.samparker;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.samparker.DAO.CustomerDAO;
+
+@RestController
+public class CustomerDetailsController {
+
+	@Autowired
+	private CustomerDAO customerDAO;
+	
+	@RequestMapping("/")
+	public String getCustomer(){
+		
+		return "Hello everyone";
+		
+	}
+	
+}

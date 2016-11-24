@@ -1,0 +1,91 @@
+package com.samparker.test;
+
+import static org.hamcrest.Matchers.equalTo;
+import static org.junit.Assert.assertThat;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+
+import com.samparker.DAO.CustomerRepository;
+import com.samparker.DOM.Customer;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
+@AutoConfigureMockMvc
+public class CustomerDetailsControllerTest {
+
+	@Autowired
+	private MockMvc mvc;
+	
+	@Autowired
+	private CustomerRepository customerDAO;
+	
+	private static final String CUSTOMER1_FIRST_NAME = "Sam";
+	private static final String CUYSTOMER1_LAST_NAME = "Parker";
+	
+	private static final String SINGLE_CUSTOMER_JSON = "{"
+			+ "\"firstName\":\"" + CUSTOMER1_FIRST_NAME + "\","
+			+ "\"lastName\":\"" + CUYSTOMER1_LAST_NAME + "\""
+			+ "}";
+	
+	private static final String MULTIPLE_CUSTOMER_JSON = "["
+			+ SINGLE_CUSTOMER_JSON + ","
+			+ SINGLE_CUSTOMER_JSON
+			+ "]";
+	
+	@Before
+	@After
+	public void tearDown(){
+		customerDAO.deleteAll();
+	}
+	
+	@Test
+	public void addCustomerTest() throws Exception {
+		
+		mvc.perform(MockMvcRequestBuilders.put("/addCustomer").contentType(MediaType.APPLICATION_JSON_UTF8).accept(MediaType.APPLICATION_JSON).content(SINGLE_CUSTOMER_JSON))
+		.andExpect(status().isOk());
+		
+		Customer expectedCustomer = new Customer(CUSTOMER1_FIRST_NAME, CUYSTOMER1_LAST_NAME);
+		Customer actualCustomer = customerDAO.findByFirstNameAndLastName(CUSTOMER1_FIRST_NAME, CUYSTOMER1_LAST_NAME);
+		
+		assertThat(actualCustomer.getFirstName(), equalTo(expectedCustomer.getFirstName()));
+		assertThat(actualCustomer.getLastName(), equalTo(expectedCustomer.getLastName()));
+	}
+	
+	@Test
+	public void addCustomersTest() throws Exception {
+		
+		final List<Customer> expectedCustomers = new ArrayList<>();
+		expectedCustomers.add(new Customer(CUSTOMER1_FIRST_NAME, CUYSTOMER1_LAST_NAME));
+		expectedCustomers.add(new Customer(CUSTOMER1_FIRST_NAME, CUYSTOMER1_LAST_NAME));		
+		
+		System.out.println(MULTIPLE_CUSTOMER_JSON);
+		
+		mvc.perform(MockMvcRequestBuilders.put("/addCustomers").contentType(MediaType.APPLICATION_JSON_UTF8).accept(MediaType.APPLICATION_JSON).content(MULTIPLE_CUSTOMER_JSON))
+		.andExpect(status().isOk());
+
+		Iterable<Customer> actualCustomers = customerDAO.findAll();
+		
+		int index = 0;
+		for(Customer actualCustomer : actualCustomers){
+			assertThat(actualCustomer.getFirstName(), equalTo(expectedCustomers.get(index).getFirstName()));
+			index++;
+		}
+	}
+
+
+}
